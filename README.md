@@ -1,66 +1,43 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Hệ thống Trắc nghiệm Trực tuyến (Exam Online)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Dự án được xây dựng nhằm tối ưu hóa quy trình quản lý ngân hàng câu hỏi, tổ chức kỳ thi và tự động hóa việc chấm điểm cho các cơ sở giáo dục. Hệ thống hỗ trợ đa người dùng với phân quyền chặt chẽ và giao diện trực quan.
 
-## About Laravel
+## Tính ăng cốt lõi
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### 1. Quản trị hệ thống và phân quyền
+* **Đăng nhập & Xác thực:** Phân quyền rõ ràng cho 3 đối tượng: **Admin, Giảng viên và Sinh viên**.
+* **Quản lý tài khoản:** Quản trị viên có quyền tạo mới, cập nhật và phân quyền cho người dùng trong hệ thống.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 2. Quản lý nội dung đào tạo (Giảng viên)
+* **Ngân hàng câu hỏi:** Giảng viên dễ dàng thêm, sửa, xóa các câu hỏi trắc nghiệm.
+* **Thiết lập đề thi:** Cho phép tạo đề thi, tùy chỉnh số lượng câu hỏi và thiết lập giới hạn thời gian làm bài.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 3. Trải nghiệm người dùng (Sinh viên)
+* **Làm bài trực tuyến:** Giao diện thi trực quan, có bộ đếm ngược thời gian thực.
+* **Chám điểm tự động:** Hệ thống tự động tính toán kết quả và hiển thị điểm số ngay sau khi kỳ thi kết thúc.
 
-## Learning Laravel
+### 4. Giao diện & Trải nghiệm
+* Thiết kế đơn giản, tập trung vào tính tiện dụng.
+* Phản hồi nhanh chóng, hoạt động ổn định trên các trình duyệt phổ biến.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Công nghệ sử dụng
+* **Backend:** PHP & Laravel Framework.
+* **Database:** MySQL.
+* **Frontend:** Blade Template.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Hướng dẫn chạy dự án
+* **Clone dự án:**
+* **Cài đăt thư viên:** `composer install`.
+* **Cấu hình:** Copy file `.env.example` thành `.env`.
+* **Khởi tạo:**
+  * Chạy lệnh `php artisan key:generate` để tạo App Key.
+  * Chạy lệnh `php artisan storage:link` để liên kết thư mục ảnh (nếu có).
+* **Database:** Import file SQL tại thư mục `database/sql/exam_online.sql` vào MySQL.
+* **Chạy:** gõ lệnh `php artisan serve` và truy cập `http://localhost:8000`.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Tài khoản Demo
+* **Quản trị viên:** `hung.nguyen@caothang.edu.vn` / `password`.
+* **Giảng viên:** `kien.phan@caothang.edu.vn` / `password`.
+* **Sinh viên:** `tuan.tran@caothang.edu.vn` / `password`.
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+*Dự án hoàn thành trong khuôn khổ đồ án tốt nghiệp*
