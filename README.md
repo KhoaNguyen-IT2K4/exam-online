@@ -2,7 +2,7 @@
 
 Dự án được xây dựng nhằm tối ưu hóa quy trình quản lý ngân hàng câu hỏi, tổ chức kỳ thi và tự động hóa việc chấm điểm cho các cơ sở giáo dục. Hệ thống hỗ trợ đa người dùng với phân quyền chặt chẽ và giao diện trực quan.
 
-## Tính ăng cốt lõi
+## Tính năng cốt lõi
 
 ### 1. Quản trị hệ thống và phân quyền
 * **Đăng nhập & Xác thực:** Phân quyền rõ ràng cho 3 đối tượng: **Admin, Giảng viên và Sinh viên**.
@@ -23,10 +23,10 @@ Dự án được xây dựng nhằm tối ưu hóa quy trình quản lý ngân 
 ## Công nghệ sử dụng
 * **Backend:** PHP & Laravel Framework.
 * **Database:** MySQL.
-* **Frontend:** Blade Template.
+* **Frontend:** HTML5 & Blade Template, CSS3, JavaScript.
 
 ## Hướng dẫn chạy dự án
-* **Clone dự án:**
+* **Clone dự án:** Mở `CMD` gõ lệnh `git clone https://github.com/KhoaNguyen-IT2K4/exam-online.git`.
 * **Cài đăt thư viên:** `composer install`.
 * **Cấu hình:** Copy file `.env.example` thành `.env`.
 * **Khởi tạo:**
